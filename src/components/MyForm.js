@@ -11,64 +11,80 @@ export default class MyForm extends React.Component {
     getEmail: "Yes",
   };
 
-  changeHandle = (event, fieldName) => {
-    console.log(fieldName);
-    this.setState({ [fieldName]: event.target.value });
+  changeHandle = (event) => {
+    const isCheckBox = event.target.type === "checkbox";
+
+    this.setState({
+      [event.target.name]: isCheckBox
+        ? event.target.checked
+        : event.target.value,
+    });
   };
 
-  agreeToTermsHandle = (event) => {
-    this.setState({ agreeToTerms: event.target.checked });
-  };
-
-  submitHandle = () => {
+  submitHandle = (event) => {
+    event.preventDefault();
     console.log(this.state);
   };
 
   render() {
     return (
-      <div className="container">
+      <form className="container" onSubmit={this.submitHandle}>
         <h3 className="header">Contact Form</h3>
         <input
+          name="name"
           type="text"
           value={this.state.name}
-          onChange={(event) => this.changeHandle(event, "name")}
+          onChange={this.changeHandle}
           placeholder="Name"
-        ></input>
+        />
+
         <input
+          name="email"
           type="text"
           value={this.state.email}
-          onChange={(event) => this.changeHandle(event, "email")}
+          onChange={this.changeHandle}
           placeholder="Email"
-        ></input>
+        />
+
         <input
+          name="title"
           type="text"
           value={this.state.title}
-          onChange={(event) => this.changeHandle(event, "title")}
+          onChange={this.changeHandle}
           placeholder="Title"
-        ></input>
+        />
 
         <textarea
+          name="message"
           type="text"
           value={this.state.message}
-          onChange={(event) => this.changeHandle(event, "message")}
+          onChange={this.changeHandle}
           placeholder="Message"
         ></textarea>
 
         <label>
-          <input type="checkbox" onChange={this.agreeToTermsHandle}></input>I
-          agree to terms and agreements
+          <input
+            name="agreeToTerms"
+            type="checkbox"
+            checked={this.state.agreeToTerms}
+            onChange={this.changeHandle}
+          ></input>
+          I agree to terms and agreements
         </label>
 
-        <select
-          value={this.state.getEmail}
-          onChange={(event) => this.changeHandle(event, "getEmail")}
-        >
-          <option>Yes, I want promotional emails</option>
-          <option>No, I do not want promotional emails</option>
-        </select>
+        <div>
+          <select
+            name="getEmail"
+            value={this.state.getEmail}
+            onChange={this.changeHandle}
+          >
+            <option>Yes, I want promotional emails</option>
+            <option>No, I do not want promotional emails</option>
+          </select>
+        </div>
 
-        <button onClick={this.submitHandle}>Send</button>
-      </div>
+        <button type="submit">Send</button>
+      </form>
     );
   }
 }
