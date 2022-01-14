@@ -24,7 +24,7 @@ export default class MyForm extends React.Component {
   submitHandle = (event) => {
     event.preventDefault();
     console.log(this.state);
-    alert("alert!");
+    alert("Submitted!");
   };
 
   render() {
