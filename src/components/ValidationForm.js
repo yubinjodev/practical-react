@@ -1,12 +1,17 @@
 import React from "react";
 import "./ValidationForm.css";
 
+const initialState = {
+  name: "",
+  email: "",
+  password: "",
+  nameError: "",
+  emailError: "",
+  passwordError: "",
+};
+
 export default class ValidationForm extends React.Component {
-  state = {
-    name: "",
-    email: "",
-    password: "",
-  };
+  state = initialState;
 
   changeHandle = (event) => {
     const isCheckBox = event.target.type === "checkbox";
@@ -18,10 +23,30 @@ export default class ValidationForm extends React.Component {
     });
   };
 
+  validation = () => {
+    // let nameError = "";
+    let emailError = "";
+    // let passwordError = "";
+
+    if (!this.state.email.includes("@")) {
+      emailError = "invalid email";
+    }
+
+    if (emailError) {
+      this.setState({ emailError });
+      return false;
+    }
+    return true;
+  };
+
   submitHandle = (event) => {
     event.preventDefault();
-    console.log(this.state);
-    alert("Submitted!");
+    const isValid = this.validation();
+
+    if (isValid) {
+      alert("Validated!");
+      this.setState(initialState);
+    }
   };
 
   render() {
@@ -47,6 +72,7 @@ export default class ValidationForm extends React.Component {
             placeholder="Email"
           />
         </div>
+        <div className="emailError">{this.state.emailError}</div>
 
         <div>
           <input

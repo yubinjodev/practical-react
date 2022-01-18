@@ -25,3 +25,7 @@ textarea {
 button {
   width: 100%;
 }
+
+.emailError {
+  color: red;
+}
