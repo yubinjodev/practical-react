@@ -1,5 +1,5 @@
 import React from "react";
-import "./FetchRandomUser";
+import "./FetchRandomUser.css";
 
 export default class FetchRandomUser extends React.Component {
   state = {

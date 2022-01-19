@@ -14,6 +14,7 @@ export default class Home extends React.Component {
           <Link to="myForm">My Form</Link>
           <Link to="validationForm">Validation Form</Link>
           <Link to="fetchRandomUser">Fetch Random User</Link>
+          <Link to="fetchMultiple">Fetch Multiple</Link>
         </div>
       </div>
     );
