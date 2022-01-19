@@ -6,6 +6,7 @@ import ImageSlider from "./components/ImageSlider/ImageSlider";
 import Counter from "./components/Counter/Counter";
 import MyForm from "./components/MyForm/MyForm";
 import ValidationForm from "./components/ValidationForm/ValidationForm";
+import FetchRandomUser from "./components/FetchRandomUser/FetchRandomUser";
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
           <Route path="/counter" element={<Counter />} />
           <Route path="/myForm" element={<MyForm />} />
           <Route path="/validationForm" element={<ValidationForm />} />
+          <Route path="/fetchRandomUser" element={<FetchRandomUser />} />
         </Routes>
 
         <Link className="go-back" to="/">

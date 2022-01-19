@@ -13,6 +13,7 @@ export default class Home extends React.Component {
           <Link to="counter">Counter</Link>
           <Link to="myForm">My Form</Link>
           <Link to="validationForm">Validation Form</Link>
+          <Link to="fetchRandomUser">Fetch Random User</Link>
         </div>
       </div>
     );
