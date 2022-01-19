@@ -8,6 +8,7 @@ import MyForm from "./components/MyForm/MyForm";
 import ValidationForm from "./components/ValidationForm/ValidationForm";
 import FetchRandomUser from "./components/FetchRandomUser/FetchRandomUser";
 import FetchMultiple from "./components/FetchMultiple/FetchMultiple";
+import SyncCounter from "./components/SyncCounter/SyncCounter";
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
           <Route path="/validationForm" element={<ValidationForm />} />
           <Route path="/fetchRandomUser" element={<FetchRandomUser />} />
           <Route path="/fetchMultiple" element={<FetchMultiple />} />
+          <Route path="/syncCounter" element={<SyncCounter />} />
         </Routes>
 
         <div className="container">
