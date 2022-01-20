@@ -2,6 +2,9 @@ import React from "react";
 import "./FetchMultiple.css";
 
 export default class FetchRandomUser extends React.Component {
+  componentDidMount() {
+    document.title = "Fetch Multiple";
+  }
   state = {
     loading: true,
     people: [],

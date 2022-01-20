@@ -11,6 +11,9 @@ const initialState = {
 };
 
 export default class ValidationForm extends React.Component {
+  componentDidMount() {
+    document.title = "Validation Form";
+  }
   state = initialState;
 
   changeHandle = (event) => {

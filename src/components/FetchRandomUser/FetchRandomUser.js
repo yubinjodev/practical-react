@@ -2,6 +2,9 @@ import React from "react";
 import "./FetchRandomUser.css";
 
 export default class FetchRandomUser extends React.Component {
+  componentDidMount() {
+    document.title = "Fetch Random User";
+  }
   state = {
     loading: true,
     person: null,

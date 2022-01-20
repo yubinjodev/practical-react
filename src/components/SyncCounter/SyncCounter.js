@@ -6,6 +6,9 @@ const initialState = {
 };
 
 export default class SyncCounter extends React.Component {
+  componentDidMount() {
+    document.title = "Sync Counter";
+  }
   state = initialState;
   add = () => {
     this.setState({

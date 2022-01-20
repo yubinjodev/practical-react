@@ -1,6 +1,9 @@
 import React from "react";
 
 export default class Counter extends React.Component {
+  componentDidMount() {
+    document.title = "Counter";
+  }
   state = {
     count: 0,
   };

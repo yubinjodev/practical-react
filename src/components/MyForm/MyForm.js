@@ -2,6 +2,9 @@ import React from "react";
 import "./MyForm.css";
 
 export default class MyForm extends React.Component {
+  componentDidMount() {
+    document.title = "My Form";
+  }
   state = {
     name: "",
     email: "",

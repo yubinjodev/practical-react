@@ -1,6 +1,9 @@
 import React from "react";
 
 export default class ImageSlider extends React.Component {
+  componentDidMount() {
+    document.title = "Image Slider";
+  }
   state = {
     images: [
       "https://i.pinimg.com/236x/b6/21/07/b62107d70659823c6f409480f7435d14--watercolor-food-watercolor-print.jpg",

@@ -1,4 +1,5 @@
 import React from "react";
+import Todo from "./Todo";
 import TodoForm from "./TodoForm";
 
 /*
@@ -14,21 +15,34 @@ import TodoForm from "./TodoForm";
 */
 
 export default class TodoList extends React.Component {
+  componentDidMount() {
+    document.title = "Todo List";
+  }
   state = {
     todos: [],
   };
 
   addTodo = (todo) => {
     this.setState({
-      todos: [todo, ...this.state.todos],
+      todos: [...this.state.todos, todo],
     });
   };
+
+  handleCheck = (id) => {};
 
   render() {
     return (
       <div>
         <TodoForm onSubmit={this.addTodo} />
-        {JSON.stringify(this.state.todos)}
+
+        {this.state.todos.map((todo) => (
+          <Todo
+            key={todo.id}
+            text={todo.text}
+            completed={todo.completed}
+            handle={this.handleCheck(todo.id)}
+          />
+        ))}
       </div>
     );
   }
