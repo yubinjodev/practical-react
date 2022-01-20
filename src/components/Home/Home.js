@@ -16,6 +16,7 @@ export default class Home extends React.Component {
           <Link to="fetchRandomUser">Fetch Random User</Link>
           <Link to="fetchMultiple">Fetch Multiple</Link>
           <Link to="syncCounter">Sync Counter</Link>
+          <Link to="todoList">Todo List</Link>
         </div>
       </div>
     );

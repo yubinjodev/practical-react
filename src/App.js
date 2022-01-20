@@ -9,6 +9,7 @@ import ValidationForm from "./components/ValidationForm/ValidationForm";
 import FetchRandomUser from "./components/FetchRandomUser/FetchRandomUser";
 import FetchMultiple from "./components/FetchMultiple/FetchMultiple";
 import SyncCounter from "./components/SyncCounter/SyncCounter";
+import TodoList from "./components/TodoList/TodoList";
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/fetchRandomUser" element={<FetchRandomUser />} />
           <Route path="/fetchMultiple" element={<FetchMultiple />} />
           <Route path="/syncCounter" element={<SyncCounter />} />
+          <Route path="/todoList" element={<TodoList />} />
         </Routes>
 
         <div className="container">
