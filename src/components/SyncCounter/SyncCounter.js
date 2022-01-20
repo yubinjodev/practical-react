@@ -1,10 +1,12 @@
 import React from "react";
+import Syncer from "./Syncer";
 
-export default class NewCounter extends React.Component {
-  state = {
-    count: 0,
-  };
+const initialState = {
+  count: 0,
+};
 
+export default class SyncCounter extends React.Component {
+  state = initialState;
   add = () => {
     this.setState({
       count: this.state.count + 1,
@@ -19,10 +21,10 @@ export default class NewCounter extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <div>Counter : {this.state.count}</div>
-        <button onClick={this.add}>+</button>
-        <button onClick={this.minus}>-</button>
+      <div>
+        <Syncer count={this.state.count} add={this.add} minus={this.minus} />
+        <Syncer count={this.state.count} add={this.add} minus={this.minus} />
+        <button onClick={() => this.setState(initialState)}>Refresh</button>
       </div>
     );
   }
