@@ -1,6 +1,7 @@
 import React from "react";
 import Todo from "./Todo";
 import TodoForm from "./TodoForm";
+import "./TodoList.css";
 
 /*
 1. add todo
@@ -28,21 +29,46 @@ export default class TodoList extends React.Component {
     });
   };
 
-  handleCheck = (id) => {};
+  filterAll = (todo) => {
+    // <Todo />;
+  };
+
+  handleCheck = (id) => {
+    this.setState({
+      todos: this.state.todos.map((todo) => {
+        if (todo.id == id) {
+          // supposed to update
+          return {
+            ...todo,
+            complete: !todo.complete,
+          };
+        } else {
+          return todo;
+        }
+      }),
+    });
+  };
 
   render() {
     return (
       <div>
         <TodoForm onSubmit={this.addTodo} />
-
-        {this.state.todos.map((todo) => (
-          <Todo
-            key={todo.id}
-            text={todo.text}
-            completed={todo.completed}
-            handle={this.handleCheck(todo.id)}
-          />
-        ))}
+        <div className="filter-buttons">
+          <button onClick={this.filterAll}>all</button>
+          <button>incomplete</button>
+          <button>complete</button>
+        </div>
+        <div>
+          {this.state.todos.map((todo) => (
+            <Todo
+              key={todo.id}
+              handleCheck={() => this.handleCheck(todo.id)}
+              todo={todo}
+            />
+          ))}
+          todos left :{" "}
+          {this.state.todos.filter((todo) => !todo.complete).length}
+        </div>
       </div>
     );
   }
