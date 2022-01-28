@@ -11,28 +11,23 @@ import FetchMultiple from "./components/FetchMultiple/FetchMultiple";
 import SyncCounter from "./components/SyncCounter/SyncCounter";
 import TodoList from "./components/TodoList/TodoList";
 import Loading from "./components/Loading/Loading";
-import Menu from "./Menu";
-import Header from "./components/Header/Header";
 
-class App extends Component {
-  componentDidMount() {
-    document.title = "Home";
-  }
-
-  state = { loading: true };
-
+export default class Menu extends React.Component {
   render() {
-    setTimeout(() => {
-      this.setState({ loading: false });
-    }, 1500);
-
     return (
       <div>
-        <Header />
-        {this.state.loading ? <Loading /> : <Menu />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/imageSlider" element={<ImageSlider />} />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/myForm" element={<MyForm />} />
+          <Route path="/validationForm" element={<ValidationForm />} />
+          <Route path="/fetchRandomUser" element={<FetchRandomUser />} />
+          <Route path="/fetchMultiple" element={<FetchMultiple />} />
+          <Route path="/syncCounter" element={<SyncCounter />} />
+          <Route path="/todoList" element={<TodoList />} />
+        </Routes>
       </div>
     );
   }
 }
-
-export default App;

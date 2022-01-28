@@ -21,16 +21,13 @@ export default class TodoList extends React.Component {
   }
   state = {
     todos: [],
+    filter: "all",
   };
 
   addTodo = (todo) => {
     this.setState({
       todos: [...this.state.todos, todo],
     });
-  };
-
-  filterAll = (todo) => {
-    // <Todo />;
   };
 
   handleCheck = (id) => {
@@ -49,17 +46,37 @@ export default class TodoList extends React.Component {
     });
   };
 
+  handleFiltering = (filter) => {
+    this.setState({
+      filter: filter,
+    });
+  };
+
   render() {
+    let todos = [];
+
+    if (this.state.filter === "all") {
+      todos = this.state.todos;
+    } else if (this.state.filter === "incomplete") {
+      todos = this.state.todos.filter((todo) => !todo.complete);
+    } else if (this.state.filter === "complete") {
+      todos = this.state.todos.filter((todo) => todo.complete);
+    }
+
     return (
       <div>
         <TodoForm onSubmit={this.addTodo} />
         <div className="filter-buttons">
-          <button onClick={this.filterAll}>all</button>
-          <button>incomplete</button>
-          <button>complete</button>
+          <button onClick={() => this.handleFiltering("all")}>all</button>
+          <button onClick={() => this.handleFiltering("incomplete")}>
+            incomplete
+          </button>
+          <button onClick={() => this.handleFiltering("complete")}>
+            complete
+          </button>
         </div>
         <div>
-          {this.state.todos.map((todo) => (
+          {todos.map((todo) => (
             <Todo
               key={todo.id}
               handleCheck={() => this.handleCheck(todo.id)}
