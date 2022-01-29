@@ -1,4 +1,5 @@
 import React from "react";
+import "./Counter.css";
 
 export default class Counter extends React.Component {
   componentDidMount() {
@@ -22,10 +23,17 @@ export default class Counter extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>Counter : {this.state.count}</div>
-        <button onClick={this.add}>+</button>
-        <button onClick={this.minus}>-</button>
+      <div className="counter-container">
+        <h3>Counter : {this.state.count}</h3>
+
+        <div className="button-container">
+          <button className="button-counter" onClick={this.add}>
+            +
+          </button>
+          <button className="button-counter" onClick={this.minus}>
+            -
+          </button>
+        </div>
       </div>
     );
   }
