@@ -1,4 +1,5 @@
 import React from "react";
+import "./ImageSlider.css";
 
 export default class ImageSlider extends React.Component {
   componentDidMount() {
@@ -24,6 +25,7 @@ export default class ImageSlider extends React.Component {
     return (
       <div className="image-container">
         <button
+          className="image-slider-button"
           onClick={() => {
             this.setState({
               idx: this.state.idx - 1,
@@ -33,7 +35,9 @@ export default class ImageSlider extends React.Component {
           BACK
         </button>
         <img src={this.state.images[this.state.idx]}></img>
-        <button onClick={this.nextButton}>NEXT</button>
+        <button className="image-slider-button" onClick={this.nextButton}>
+          NEXT
+        </button>
       </div>
     );
   }
