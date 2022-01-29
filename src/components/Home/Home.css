@@ -1,17 +1,4 @@
-@font-face {
-  font-family: "technique_brknormal";
-  src: url("../../../public/Fonts/techniqu-webfont.woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-.home {
-  align-items: center;
-  justify-content: center;
-  margin: 100px;
-}
-
-h1 {
+.homescreen {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,37 +8,6 @@ h1 {
   font-weight: bolder;
   font-size: 45px;
   /* identical to box height */
-
+  margin: 25vh;
   letter-spacing: 0.2em;
-}
-
-h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-  color: var(--primary-color);
-}
-
-.home-container {
-  background: rgba(69, 83, 173, 0.2);
-  border-radius: 50px;
-  border-radius: 60px;
-  padding: 20px 50px 20px 50px;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 80px;
-  margin-bottom: 80px;
-  float: left;
-}
-
-.components {
-  text-decoration: none;
-  color: var(--primary-color);
-  padding-bottom: 15px;
-}
-
-hr {
-  height: 0.1%;
-  background-color: black;
-  width: 100%;
 }
