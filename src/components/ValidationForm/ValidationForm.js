@@ -32,15 +32,15 @@ export default class ValidationForm extends React.Component {
     let passwordError = "";
 
     if (!this.state.name) {
-      nameError = "name cannot be empty";
+      nameError = "Name cannot be empty";
     }
 
     if (!this.state.email.includes("@")) {
-      emailError = "invalid email";
+      emailError = "Invalid email";
     }
 
     if (this.state.password.length < 8) {
-      passwordError = "password must be at least 8 characters long";
+      passwordError = "Password must be at least 8 characters long";
     }
 
     if (nameError || emailError || passwordError) {
@@ -64,6 +64,7 @@ export default class ValidationForm extends React.Component {
     return (
       <form className="container" onSubmit={this.submitHandle}>
         <h3 className="header">Validation Form</h3>
+        <div className="error">{this.state.nameError}</div>
         <div>
           <input
             name="name"
@@ -73,8 +74,7 @@ export default class ValidationForm extends React.Component {
             placeholder="Name"
           />
         </div>
-        <div className="error">{this.state.nameError}</div>
-
+        <div className="error">{this.state.emailError}</div>
         <div>
           <input
             name="email"
@@ -84,8 +84,8 @@ export default class ValidationForm extends React.Component {
             placeholder="Email"
           />
         </div>
-        <div className="error">{this.state.emailError}</div>
 
+        <div className="error">{this.state.passwordError}</div>
         <div>
           <input
             name="password"
@@ -95,7 +95,6 @@ export default class ValidationForm extends React.Component {
             placeholder="Password"
           />
         </div>
-        <div className="error">{this.state.passwordError}</div>
 
         <button type="submit">Send</button>
       </form>
