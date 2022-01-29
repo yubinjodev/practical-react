@@ -40,7 +40,9 @@ export default class Header extends React.Component {
               <li className="navbar-contents">Home</li>
             </Link>
 
-            <li className="navbar-contents">Projects</li>
+            <Link to="/projects">
+              <li className="navbar-contents">Projects</li>
+            </Link>
             <li className="navbar-contents">About Me</li>
             <li className="navbar-contents">Contact</li>
           </div>
