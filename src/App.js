@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     setTimeout(() => {
       this.setState({ loading: false });
-    }, 1500);
+    }, 2000);
 
     return (
       <div>

@@ -20,6 +20,7 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bolder;
+  font-size: 45px;
   /* identical to box height */
 
   letter-spacing: 0.2em;
@@ -33,10 +34,21 @@ h3 {
 .home-container {
   background: rgba(83, 113, 255, 0.19);
   border-radius: 60px;
-  padding: 40px;
-  margin: 100px;
-  width: 787px;
-  height: 300px;
+  padding: 20px 50px 20px 50px;
+  width: 500px;
   display: flex;
   flex-direction: column;
+  margin: auto;
+}
+
+.components {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 15px;
+}
+
+hr {
+  height: 0.1%;
+  background-color: black;
+  width: 100%;
 }

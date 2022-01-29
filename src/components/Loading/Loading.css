@@ -1,4 +1,16 @@
-img {
+.loading-logo {
+  width: 462.48px;
+  height: 402.19px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin: 150px;
+}
+
+#rotate {
+  animation: rotation 2s infinite linear;
   width: 462.48px;
   height: 402.19px;
   display: flex;
@@ -8,10 +20,25 @@ img {
   justify-content: center;
 }
 
-.rotateimg180 {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+    width: 462.48px;
+    height: 402.19px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  to {
+    transform: rotate(359deg);
+    width: 462.48px;
+    height: 402.19px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
 }

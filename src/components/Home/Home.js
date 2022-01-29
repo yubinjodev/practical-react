@@ -17,14 +17,37 @@ export default class Home extends React.Component {
         <h1>Welcome to Yubin's Portfolio</h1>
         <div className="home-container">
           <h3>React Components</h3>
-          <Link to="imageSlider">Image Slider</Link>
-          <Link to="counter">Counter</Link>
-          <Link to="myForm">My Form</Link>
-          <Link to="validationForm">Validation Form</Link>
-          <Link to="fetchRandomUser">Fetch Random User</Link>
-          <Link to="fetchMultiple">Fetch Multiple</Link>
-          <Link to="syncCounter">Sync Counter</Link>
-          <Link to="todoList">Todo List</Link>
+          <Link className="components" to="imageSlider">
+            Image Slider &gt;
+          </Link>
+
+          <Link className="components" to="counter">
+            Counter &gt;
+          </Link>
+
+          <Link className="components" to="myForm">
+            My Form &gt;
+          </Link>
+
+          <Link className="components" to="validationForm">
+            Validation Form &gt;
+          </Link>
+
+          <Link className="components" to="fetchRandomUser">
+            Fetch Random User &gt;
+          </Link>
+
+          <Link className="components" to="fetchMultiple">
+            Fetch Multiple &gt;
+          </Link>
+
+          <Link className="components" to="syncCounter">
+            Sync Counter &gt;
+          </Link>
+
+          <Link className="components" to="todoList">
+            Todo List &gt;
+          </Link>
         </div>
       </div>
     );

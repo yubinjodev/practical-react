@@ -22,7 +22,7 @@ export default class ImageSlider extends React.Component {
 
   render() {
     return (
-      <div className="App-header">
+      <div className="image-container">
         <button
           onClick={() => {
             this.setState({
