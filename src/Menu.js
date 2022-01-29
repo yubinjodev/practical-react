@@ -10,14 +10,13 @@ import FetchRandomUser from "./components/FetchRandomUser/FetchRandomUser";
 import FetchMultiple from "./components/FetchMultiple/FetchMultiple";
 import SyncCounter from "./components/SyncCounter/SyncCounter";
 import TodoList from "./components/TodoList/TodoList";
-import Loading from "./components/Loading/Loading";
 
 export default class Menu extends React.Component {
   render() {
     return (
       <div>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/imageSlider" element={<ImageSlider />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/myForm" element={<MyForm />} />
