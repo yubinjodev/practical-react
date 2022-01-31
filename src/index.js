@@ -17,6 +17,7 @@ import FetchMultiple from "./components/FetchMultiple/FetchMultiple";
 import SyncCounter from "./components/SyncCounter/SyncCounter";
 import TodoList from "./components/TodoList/TodoList";
 import Home from "./components/Home/Home";
+import Contact from "./components/Contact/Contact";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -25,6 +26,7 @@ ReactDOM.render(
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/projects" element={<Projects />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/projects/imageSlider" element={<ImageSlider />} />
       <Route path="/projects/counter" element={<Counter />} />
       <Route path="/projects/myForm" element={<MyForm />} />
