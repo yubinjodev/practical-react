@@ -27,7 +27,7 @@ export default class FetchRandomUser extends React.Component {
     }
 
     return (
-      <div className="container">
+      <div>
         {this.state.people.map((person, idx) => (
           <div key={person.login.uuid}>
             {/* <div key={`user${idx}`}> */}

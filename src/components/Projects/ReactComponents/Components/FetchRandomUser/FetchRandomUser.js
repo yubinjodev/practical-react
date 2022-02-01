@@ -19,7 +19,7 @@ export default class FetchRandomUser extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <div>
           {this.state.loading || !this.state.person ? (
             <div>loading . . .</div>

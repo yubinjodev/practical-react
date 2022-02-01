@@ -11,10 +11,9 @@
   margin: 100px;
 }
 
-.projects-navbar{
+.projects-navbar {
   cursor: pointer;
   list-style-type: none;
-  
 }
 
 h1 {
@@ -42,7 +41,7 @@ h3 {
   border-radius: 50px;
   border-radius: 60px;
   padding: 20px 50px 20px 50px;
-  width: 200px;
+  width: var(--container-width-large);
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -55,16 +54,14 @@ h3 {
   padding-bottom: 15px;
 }
 
-.art-container{
-width: 600px;
-margin-top: -900px;
-display: flex;
-flex-direction: column;
-margin: 0 auto;
+.art-container {
+  width: 600px;
+  margin-top: -900px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
-.frame{
-  margin:35px;
+.frame {
+  margin: 35px;
 }
-
-

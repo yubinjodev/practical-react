@@ -32,7 +32,7 @@ export default class MyForm extends React.Component {
 
   render() {
     return (
-      <form className="container" onSubmit={this.submitHandle}>
+      <form onSubmit={this.submitHandle}>
         <h3 className="header">Contact Form</h3>
         <input
           name="name"
