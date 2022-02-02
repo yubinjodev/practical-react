@@ -1,67 +1,75 @@
 import React from "react";
-import './Contact.css'
+import "./Contact.css";
 
-const initialState={
-    name:"",
-    email:"",
-    phone:"",
-    message:""
-}
+const initialState = {
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+};
 
-export default class Contact extends React.Component{
-    componentDidMount() {
-        document.title = "Validation Form";
-      }
+export default class Contact extends React.Component {
+  componentDidMount() {
+    document.title = "Validation Form";
+  }
 
-    state=initialState;
+  state = initialState;
 
-    inputHandle=(e)=>{
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
+  changeHandle = (event) => {
+    const isCheckBox = event.target.type === "checkbox";
 
-    submitHandle =(e)=>{
-        e.preventDefault();
-        console.log(this.state)
-    }
-    
-    render(){
-        return (
-            <form onSubmit={this.submitHandle}
-             className="contact-form">
-                 <h3>To. Yubin</h3>
-                <input 
-                onChange={this.inputHandle} 
-                name="name" 
-                placeholder="Name"
-                value={this.state.name}>
-                </input>
-                
-                <input 
-                onChange={this.inputHandle} 
-                name="email" 
-                placeholder="Email"
-                value={this.state.email}>
-                </input>
-                
-                <input 
-                onChange={this.inputHandle} 
-                name="phone" 
-                placeholder="Phone"
-                value={this.state.phone}>
-                </input>
-                
-                <input 
-                id="message"
-                onChange={this.inputHandle} 
-                name="message" 
-                placeholder="Message"
-                value={this.state.message}>
-                </input>
-                
-                <button type="submit">Send</button>
-            </form>
-        )
-    }
+    this.setState({
+      [event.target.name]: isCheckBox
+        ? event.target.checked
+        : event.target.value,
+    });
+  };
+
+  submitHandle = (event) => {
+    event.preventDefault();
+    console.log(this.state);
+    alert("Submitted!");
+  };
+
+  render() {
+    return (
+      <form className="contact-container" onSubmit={this.submitHandle}>
+        <h3 className="header">Contact Form</h3>
+        <input
+          name="name"
+          type="text"
+          value={this.state.name}
+          onChange={this.changeHandle}
+          placeholder="Name"
+        />
+
+        <input
+          name="email"
+          type="text"
+          value={this.state.email}
+          onChange={this.changeHandle}
+          placeholder="Email"
+        />
+
+        <input
+          name="title"
+          type="text"
+          value={this.state.title}
+          onChange={this.changeHandle}
+          placeholder="Title"
+        />
+
+        <input
+          id="message"
+          name="message"
+          type="text"
+          value={this.state.message}
+          onChange={this.changeHandle}
+          placeholder="Message"
+        ></input>
+
+        <button type="submit">Send</button>
+      </form>
+    );
+  }
 }
