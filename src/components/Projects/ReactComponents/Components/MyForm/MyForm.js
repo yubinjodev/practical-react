@@ -58,13 +58,14 @@ export default class MyForm extends React.Component {
           placeholder="Title"
         />
 
-        <textarea
+        <input
+          id="message"
           name="message"
           type="text"
           value={this.state.message}
           onChange={this.changeHandle}
           placeholder="Message"
-        ></textarea>
+        ></input>
 
         <label>
           <input

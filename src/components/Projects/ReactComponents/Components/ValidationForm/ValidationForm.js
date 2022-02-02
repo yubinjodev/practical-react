@@ -62,7 +62,7 @@ export default class ValidationForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.submitHandle}>
+      <form className="valid-container" onSubmit={this.submitHandle}>
         <h3 className="header">Validation Form</h3>
         <div className="error">{this.state.nameError}</div>
         <div>

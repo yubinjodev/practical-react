@@ -6,7 +6,6 @@ export default class FetchRandomUser extends React.Component {
     document.title = "Fetch Random User";
   }
   state = {
-    loading: true,
     person: null,
   };
 
@@ -14,17 +13,17 @@ export default class FetchRandomUser extends React.Component {
     const url = "https://api.randomuser.me/";
     const response = await fetch(url);
     const data = await response.json();
-    this.setState({ person: data.results[0], loading: false });
+    this.setState({ person: data.results[0] });
   }
 
   render() {
     return (
-      <div>
+      <div className="user-container">
         <div>
-          {this.state.loading || !this.state.person ? (
-            <div>loading . . .</div>
+          {!this.state.person ? (
+            <div></div>
           ) : (
-            <div>
+            <div className="user-container">
               <img src={this.state.person.picture.large} />
               <div>
                 {this.state.person.name.first} {this.state.person.name.last}
@@ -32,13 +31,7 @@ export default class FetchRandomUser extends React.Component {
             </div>
           )}
         </div>
-        <button
-          onClick={() => {
-            window.location.reload(false);
-          }}
-        >
-          New User
-        </button>
+        <button>Generate New User</button>
       </div>
     );
   }

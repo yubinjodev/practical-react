@@ -4,7 +4,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  margin: 100px;
+  margin: 0 auto;
 }
 
 .button-container {
