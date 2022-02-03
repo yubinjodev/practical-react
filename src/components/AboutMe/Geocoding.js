@@ -17,6 +17,9 @@ export async function Geocoding(query) {
         "X-NCP-APIGW-API-KEY": `${CLIENT_SECRET}`,
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
+        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+        "Access-Control-Allow-Credentials": true,
+        crossorigin: true,
       },
     })
     .then((res) => {
@@ -34,5 +37,6 @@ export async function Geocoding(query) {
       return [data.addresses[0].x, data.addresses[0].y];
     });
 
+  console.log(coord);
   return coord;
 }

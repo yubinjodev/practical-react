@@ -14,12 +14,12 @@ import {
 } from "react-naver-maps";
 import "./NaverMapApi.css";
 
+const YOUR_CLIENT_ID = "ao4ecp11iw";
 export default class NaverMapApi extends React.Component {
-  YOUR_CLIENT_ID = "ao4ecp11iw";
   render() {
     return (
       <div>
-        <RenderAfterNavermapsLoaded ncpClientId={this.YOUR_CLIENT_ID}>
+        <RenderAfterNavermapsLoaded ncpClientId={`${YOUR_CLIENT_ID}`}>
           <NaverMap
             mapDivId={"react-naver-map"} // default: react-naver-map
             style={{

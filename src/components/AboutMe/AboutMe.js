@@ -38,7 +38,9 @@ export default class AboutMe extends React.Component {
           ></input>
 
           <button
-            onClick={() => Geocoding(`${this.state.query}`)}
+            onClick={() => {
+              Geocoding(`${this.state.query}`);
+            }}
             className="map-button"
           >
             search
