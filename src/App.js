@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component } from "react";
 import Loading from "./components/Loading/Loading";
 import Header from "./components/Header/Header";
 import "./App.css";

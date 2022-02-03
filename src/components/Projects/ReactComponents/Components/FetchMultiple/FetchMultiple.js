@@ -1,16 +1,14 @@
 import React from "react";
 import "./FetchMultiple.css";
 
-export default class FetchRandomUser extends React.Component {
-  componentDidMount() {
-    document.title = "Fetch Multiple";
-  }
+export default class FetchMultiple extends React.Component {
   state = {
     loading: true,
     people: [],
   };
 
   async componentDidMount() {
+    document.title = "Fetch Multiple";
     const url = "https://api.randomuser.me/?results=5";
     const response = await fetch(url);
     const data = await response.json();
@@ -31,7 +29,7 @@ export default class FetchRandomUser extends React.Component {
         {this.state.people.map((person, idx) => (
           <div key={person.login.uuid}>
             {/* <div key={`user${idx}`}> */}
-            <img src={person.picture.large} />
+            <img src={person.picture.large} alt="userimage" />
             <div>{person.name.first}</div>
             <div>{person.name.last}</div>
           </div>

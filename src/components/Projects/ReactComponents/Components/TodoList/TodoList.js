@@ -33,7 +33,7 @@ export default class TodoList extends React.Component {
   handleCheck = (id) => {
     this.setState({
       todos: this.state.todos.map((todo) => {
-        if (todo.id == id) {
+        if (todo.id === id) {
           // supposed to update
           return {
             ...todo,

@@ -1,0 +1,23 @@
+h3 {
+  text-align: center;
+}
+
+.map-container {
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: var(--container-width-large);
+}
+
+.map-container input {
+  margin: 100px;
+  float: right;
+}
+
+.map-button {
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  float: right;
+}

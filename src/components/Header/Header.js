@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css";
 import Logo from "./logo.png";
 
@@ -43,13 +43,13 @@ export default class Header extends React.Component {
             <Link to="/projects">
               <li className="navbar-contents">Projects</li>
             </Link>
-            
+
             <Link to="/about-me">
-            <li className="navbar-contents">About Me</li>
+              <li className="navbar-contents">About Me</li>
             </Link>
 
             <Link to="/contact">
-            <li className="navbar-contents">Contact</li>
+              <li className="navbar-contents">Contact</li>
             </Link>
           </div>
         </ul>

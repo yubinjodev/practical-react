@@ -34,7 +34,7 @@ export default class ImageSlider extends React.Component {
         >
           BACK
         </button>
-        <img src={this.state.images[this.state.idx]}></img>
+        <img alt="sliderimage" src={this.state.images[this.state.idx]}></img>
         <button className="image-slider-button" onClick={this.nextButton}>
           NEXT
         </button>
