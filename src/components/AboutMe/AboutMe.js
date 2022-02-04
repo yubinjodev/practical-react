@@ -5,6 +5,7 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import firebaseDB from "../../firebaseConfig";
 import "./AboutMe.css";
+import { Geocoding } from "./Geocoding";
 
 const initialState = {
   name: "",
@@ -68,7 +69,7 @@ export default class AboutMe extends React.Component {
                   }
                 })
               }
-              this.setState(initialState)
+              // this.setState(initialState)
             }}
             // onClick={() => this.handleSubmit}
           >
@@ -90,16 +91,23 @@ export default class AboutMe extends React.Component {
           <button
             className="map-button"
             onClick={()=>{
-              firebaseDB.child("Farms").on("value", (snapshot)=>{
-                if(snapshot.val() !== null){
-                  this.setState({data:snapshot.val() });
-                }else{
-                  this.setState({})
+              let query= this.state.address
+              alert(query)
+              Geocoding(query)
+//here boo
+             }
+            }
+            // onClick={()=>{
+            //   firebaseDB.child("Farms").on("value", (snapshot)=>{
+            //     if(snapshot.val() !== null){
+            //       this.setState({data:snapshot.val() });
+            //     }else{
+            //       this.setState({})
 
-                  return ()=>this.state
-                }
-              })
-            },[]}
+            //       return ()=>this.state
+            //     }
+            //   })
+            // },[]}
             >
               Read
           </button>
