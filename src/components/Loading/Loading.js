@@ -6,7 +6,7 @@ export default class Loading extends React.Component {
     return (
       <img
         id={"rotate"}
-        classname={"loading-logo"}
+        className={"loading-logo"}
         src={require("./logo.png")}
         alt="logo"
       />
