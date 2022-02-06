@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { getDatabase, ref, runTransaction } from "firebase/database";
 import NaverMapApi from "./NaverMapApi";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import firebaseDB from "../../firebaseConfig";
 import "./AboutMe.css";
+import { Geocoding } from "./Geocoding";
 
 export const AboutMeFunction = () => {
   const [data, setData] = useState({});
   const [state, setState] = useState({});
+  const [coord, setCoord] = useState({});
+  const [query, setQuery] = useState({});
 
   const { name, address } = state;
 
@@ -25,7 +29,7 @@ export const AboutMeFunction = () => {
     } else if (!address) {
       alert("Please enter address");
     } else {
-      firebaseDB.child("Farms").push(state, (err) => {
+      firebaseDB.child("Database/Farms").push(state, (err) => {
         if (err) {
           alert(err);
         } else {
@@ -36,10 +40,9 @@ export const AboutMeFunction = () => {
   };
 
   useEffect(() => {
-    firebaseDB.child("Farms").on("value", (snapshot) => {
+    firebaseDB.child("Database/Farms").on("value", (snapshot) => {
       if (snapshot.value !== null) {
         setData({ ...snapshot.val() });
-        console.log(data);
       } else {
         setData({});
       }
@@ -78,15 +81,14 @@ export const AboutMeFunction = () => {
             <h3>Read</h3>
             <div>
               {Object.keys(data).map((id, index) => {
-                console.log(id);
                 return (
                   <ul key={id}>
-                    <li>{index + 1}</li>
-                    <li>{data[id.name]}</li>
-                    <li>{data[id.address]}</li>
+                    <li>{data[id].name}</li>
+                    <li>{data[id].address}</li>
                   </ul>
                 );
               })}
+              {/* <Geocoding /> */}
             </div>
           </div>
 
