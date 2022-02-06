@@ -88,7 +88,7 @@ export const AboutMeFunction = () => {
                   </ul>
                 );
               })}
-              {/* <Geocoding /> */}
+              {/* {Geocoding("서초동 1628-61")} */}
             </div>
           </div>
 
