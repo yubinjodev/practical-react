@@ -6,7 +6,7 @@ export const ProjectFiller = () => {
     <div className="art-container">
       <h2>Project Name</h2>
       <div>
-        <img src="ImageFillerSmall" style={{ height: "50px" }} />
+        <img src={require("./ImageFillerSmall.png")}/>
         <div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh nisl
@@ -15,7 +15,7 @@ export const ProjectFiller = () => {
       </div>
 
       <div>
-        <img src="ImageFillerSmall" style={{ height: "50px" }} />
+      <img src={require("./ImageFillerSmall.png")}/>
         <div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh nisl
@@ -24,7 +24,7 @@ export const ProjectFiller = () => {
       </div>
 
       <div>
-        <img src="ImageFillerSmall" style={{ height: "50px" }} />
+      <img src={require("./ImageFillerSmall.png")}/>
         <div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh nisl
