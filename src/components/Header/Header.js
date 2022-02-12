@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import Logo from "./logo.png";
+import MainLogo from "./MainLogo.svg";
 
 export default class Header extends React.Component {
   render() {
@@ -10,7 +10,7 @@ export default class Header extends React.Component {
         <ul className="navbar-container">
           <li>
             <Link to="/">
-              <img className="navbar-logo" src={Logo} alt="logo"></img>
+              <img className="navbar-logo" src={MainLogo} alt="Main Logo"></img>
             </Link>
           </li>
           <div>

@@ -2,9 +2,10 @@ import React from "react";
 import "./Projects.css";
 import ReactComponents from "./ReactComponents/ReactComponents";
 import ArtGallery from "./ArtGallery/ArtGallery";
+import { ProjectFiller } from "./ProjectFiller";
 
 const initialState = {
-  web: false,
+  web: true,
   mobile: false,
   dataEngineering: false,
   react: false,
@@ -16,6 +17,7 @@ export default class Home extends React.Component {
 
   onClickHandle = (e) => {
     this.setState(initialState);
+    this.setState({web:false});
     this.setState({ [e.target.getAttribute("name")]: true });
   };
 
@@ -44,6 +46,9 @@ export default class Home extends React.Component {
           </ul>
         </div>
 
+        {this.state.web ? <ProjectFiller /> : <div></div>}
+        {this.state.mobile ? <ProjectFiller /> : <div></div>}
+        {this.state.dataEngineering ? <ProjectFiller /> : <div></div>}
         {this.state.react ? <ReactComponents /> : <div></div>}
         {this.state.artGallery ? <ArtGallery /> : <div></div>}
       </div>

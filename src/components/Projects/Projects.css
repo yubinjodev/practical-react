@@ -14,6 +14,7 @@
 .projects-navbar {
   cursor: pointer;
   list-style-type: none;
+  float: left;
 }
 
 h1 {
@@ -60,6 +61,10 @@ h3 {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+}
+
+.art-container h2 {
+  text-align: center;
 }
 
 .frame {
