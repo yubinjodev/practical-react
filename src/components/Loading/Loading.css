@@ -1,47 +1,21 @@
-.loading-logo {
-  width: 200px;
-  height: 200px;
+.logo-container {
+  width: 500px;
+  height: 500px;
   display: flex;
-  flex-direction: column;
-  margin: 15vh;
-  align-items: center;
-  justify-content: center;
-  padding: 90px;
+  margin: 0 auto;
 }
 
-#rotate {
-  animation: rotation 2s infinite linear;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  margin: 15vh;
-  align-items: center;
-  justify-content: center;
-  padding: 90px;
+#logo-left {
+  width: 126px;
+  height: 217.5px;
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-    width: 200px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    margin: 15vh;
-    align-items: center;
-    justify-content: center;
-    padding: 90px;
-  }
-  to {
-    transform: rotate(359deg);
-    width: 200px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    margin: 15vh;
-    align-items: center;
-    justify-content: center;
-    padding: 90px;
-  }
+#logo-top {
+  width: 168.5px;
+  height: 146px;
+}
+
+#logo-right {
+  width: 168.5px;
+  height: 220px;
 }

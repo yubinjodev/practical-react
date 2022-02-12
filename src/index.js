@@ -13,6 +13,7 @@ import Contact from "./components/Contact/Contact";
 import { RenderAfterNavermapsLoaded } from "react-naver-maps";
 import { AboutMe } from "./components/AboutMe/AboutMe";
 import { Login } from "./components/Login/Login";
+import Loading from "./components/Loading/Loading";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -21,6 +22,7 @@ ReactDOM.render(
     </RenderAfterNavermapsLoaded>
     <Routes>
       {/* <Route path="/" element={<Login />} /> */}
+      <Route path="/" element={<Loading />} />
       <Route path="/home" element={<Home />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />

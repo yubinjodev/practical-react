@@ -2,7 +2,7 @@
   --primary-color: #4553ad;
   --secondary-color: #5371ff;
   --tertiary-color: #99a7ce;
-  --small-button-height: 33px;
+  --small-button-height: 20px;
   --small-button-width: 96px;
   --small-button-border-radius: 30px;
   --container-width: 200px;
@@ -20,9 +20,10 @@
 
 .navbar-logo {
   width: 60px;
-  height: 50px;
+  height: 60px;
   float: left;
-  padding: 23px;
+  margin-top:1vh;
+  margin-left:2vw;
 }
 
 .navbar-container {
@@ -53,8 +54,8 @@
   background: var(--secondary-color);
   border-color: var(--secondary-color);
   border-radius: 30px;
-  width: 96px;
-  height: 33px;
+  width: var(--small-button-width);
+  height: var(--small-button-height);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -73,8 +74,8 @@
   background: #ffff;
   border-color: white;
   border-radius: 30px;
-  width: 96px;
-  height: 33px;
+  width: var(--small-button-width);
+  height: var(--small-button-height);
   padding: 16px 20px;
   color: var(--secondary-color);
   font-weight: bold;

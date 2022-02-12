@@ -12,8 +12,8 @@ import "./ReactComponents.css";
 export default class Components extends React.Component {
   render() {
     return (
-      <div className="comp-container">
-        <h3>React Components</h3>
+      <div className="art-container">
+        <h2>React Components</h2>
         <div className="comp">
           <ImageSlider />
         </div>

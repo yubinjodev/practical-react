@@ -9,6 +9,7 @@ export default class ArtGallery extends React.Component {
   render() {
     return (
       <div className="art-container">
+        <h2>Art Gallery</h2>
         <img alt="Flowers" className="frame " src={Flowers} />
         <img alt="Reflection" className="frame " src={Reflection} />
         <img alt="Bubble" className="frame " src={Bubble} />
