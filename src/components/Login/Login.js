@@ -1,20 +1,34 @@
-import React, {useState} from "react";
-import "./Login.css"
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./Login.css";
 
-export const Login = () =>{
+export const Login = () => {
   const [password, setPassword] = useState();
 
-  return(
+  return (
     <div>
-      <form className="valid-container">
-      <h3 className="header">Enter the password</h3>
+      <form className="login-container">
+        <h3 className="header">Enter passcode</h3>
         <input
-        placeholder="Password"
-        value={password}
-        onChange={(e)=> setPassword(e.target.value)}
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button>Submit</button>
+        <button
+          onClick={() => {
+            if (password != "yubin") {
+              alert("invalid pw");
+            }
+            if (password === "yubin") {
+              alert("yay");
+            }
+          }}
+        >
+          Submit
+        </button>
       </form>
     </div>
-  )
-}
+  );
+};

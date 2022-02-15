@@ -1,0 +1,6 @@
+.login-container{
+    width: var(--container-width-large);
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}

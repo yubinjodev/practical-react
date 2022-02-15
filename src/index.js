@@ -21,8 +21,8 @@ ReactDOM.render(
       <App />
     </RenderAfterNavermapsLoaded>
     <Routes>
-      {/* <Route path="/" element={<Login />} /> */}
-      <Route path="/" element={<Loading />} />
+      <Route path="/" element={<Login />} />
+      {/* <Route path="/" element={<Loading />} /> */}
       <Route path="/home" element={<Home />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />
