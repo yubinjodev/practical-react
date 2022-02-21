@@ -25,8 +25,19 @@ export const Login = () =>{
         value={password}
         onChange={(e)=> setPassword(e.target.value)}
         ></input>
-        <button>Submit</button>
+        <button
+          onClick={() => {
+            if (password != "yubin") {
+              alert("invalid pw");
+            }
+            if (password === "yubin") {
+              alert("yay");
+            }
+          }}
+        >
+          Submit
+        </button>
       </form>
     </div>
-  )
-}
+  );
+};
