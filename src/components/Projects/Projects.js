@@ -5,11 +5,11 @@ import ArtGallery from "./ArtGallery/ArtGallery";
 import { ProjectFiller } from "./ProjectFiller";
 
 const initialState = {
-  web: true,
+  web: false,
   mobile: false,
   dataEngineering: false,
   react: false,
-  artGallery: false,
+  artGallery: true,
 };
 
 export default class Home extends React.Component {
@@ -28,7 +28,7 @@ export default class Home extends React.Component {
       <div className="home">
         <div className="projects-navbar">
           <ul>
-            <h3 name="web" value={this.state.web} onClick={this.onClickHandle}>
+            {/* <h3 name="web" value={this.state.web} onClick={this.onClickHandle}>
               Web
             </h3>
             <h3 name="mobile" onClick={this.onClickHandle}>
@@ -39,7 +39,7 @@ export default class Home extends React.Component {
             </h3>
             <h3 name="react" onClick={this.onClickHandle}>
               React
-            </h3>
+            </h3> */}
             <h3 name="artGallery" onClick={this.onClickHandle}>
               Art Gallery
             </h3>
