@@ -1,4 +1,4 @@
-import React from "react";
+import {useState} from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -8,21 +8,21 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Projects from "./components/Projects/Projects";
-import Home from "./components/Home/Home";
 import Contact from "./components/Contact/Contact";
 import { RenderAfterNavermapsLoaded } from "react-naver-maps";
 import { AboutMe } from "./components/AboutMe/AboutMe";
 import { Login } from "./components/Login/Login";
-import Loading from "./components/Loading/Loading";
+import { Home } from "./components/Home/Home";
+import { Loading } from "./components/Loading/Loading";
+
 
 ReactDOM.render(
   <BrowserRouter>
     <RenderAfterNavermapsLoaded ncpClientId={"ao4ecp11iw"}>
-      <App />
+      <App/>
     </RenderAfterNavermapsLoaded>
     <Routes>
-      {/* <Route path="/" element={<Login />} /> */}
-      <Route path="/" element={<Loading />} />
+      <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />

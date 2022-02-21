@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import Loading from "./components/Loading/Loading";
 import Header from "./components/Header/Header";
 import "./App.css";
@@ -9,17 +9,8 @@ const App = () =>{
   //   document.title = "Home";
   // }
 
-  // state = { loading: true };
-
-  
-  // setTimeout(() => {
-  //   this.setState({ loading: false });
-  // }, 2000);
-
   return(
-
      <Header/>
-    
   )
 }
 

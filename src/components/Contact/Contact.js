@@ -9,9 +9,9 @@ const initialState = {
 };
 
 export default class Contact extends React.Component {
-  componentDidMount() {
-    document.title = "Validation Form";
-  }
+  // componentDidMount() {
+  //   document.title = "Validation Form";
+  // }
 
   state = initialState;
 
